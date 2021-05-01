@@ -30,8 +30,19 @@ app.get('/stats', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/stats.html'));
 });
 
+// API routes
+app.get('/api/workouts', (req, res) => {
+  res.json(null);
+});
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'view.html')));
+app.put('/api/workouts/:id', (req, res) => {
+  res.json(null);
+});
+
+app.post('/api/workouts', (req, res) => {
+  res.json(null);
+});
+
 
 app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
